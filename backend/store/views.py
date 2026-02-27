@@ -1,8 +1,7 @@
-from django.http import JsonResponse
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Category, Product   
+from .serializers import CategorySerializer, ProductSerializer
 
-def home(request):
-    data={
-        'message':'Welcome to the E-commerce Store!'
-    } 
-     
-    return JsonResponse(data)
+@api_view(['GET'])
+def get_product 
